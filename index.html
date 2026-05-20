@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>铃默 — UI设计师</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            surface:  '#111111',
+            elevated: '#181818',
+            border:   '#222222',
+            accent:   '#d4d4d4',
+          },
+          fontFamily: {
+            sans: ['Inter', 'SF Pro Display', '-apple-system', 'BlinkMacSystemFont',
+                   'PingFang SC', 'Microsoft YaHei', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Google Fonts — Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- 共享样式 -->
+  <link rel="stylesheet" href="css/shared.css">
+</head>
+
+<body class="bg-[#0a0a0a] text-neutral-200">
+
+  <!-- ═══════════════════════════════════════
+       导航栏
+       ═══════════════════════════════════════ -->
+  <nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-[#0a0a0a]/80 border-b border-[#222]">
+    <div class="max-w-[1200px] mx-auto px-6 h-16 flex items-center justify-between">
+      <!-- 标志 -->
+      <a href="index.html" class="text-sm font-semibold tracking-widest uppercase text-neutral-100">
+        铃默
+      </a>
+
+      <!-- 桌面端链接 -->
+      <div class="hidden md:flex items-center gap-8" data-nav-menu>
+        <a href="index.html" data-nav-link class="text-sm text-neutral-400 hover:text-neutral-100 transition-colors">首页</a>
+        <a href="works.html" data-nav-link class="text-sm text-neutral-400 hover:text-neutral-100 transition-colors">作品</a>
+        <a href="about.html" data-nav-link class="text-sm text-neutral-400 hover:text-neutral-100 transition-colors">关于</a>
+        <a href="contact.html" data-nav-link class="text-sm text-neutral-400 hover:text-neutral-100 transition-colors">联系</a>
+      </div>
+
+      <!-- 移动端菜单按钮 -->
+      <button data-nav-toggle class="md:hidden w-10 h-10 flex flex-col items-center justify-center gap-1.5" aria-expanded="false" aria-label="菜单">
+        <span class="block w-5 h-px bg-neutral-300 transition-all"></span>
+        <span class="block w-5 h-px bg-neutral-300 transition-all"></span>
+      </button>
+    </div>
+
+    <!-- 移动端菜单 -->
+    <div class="md:hidden hidden flex-col bg-[#0a0a0a] border-t border-[#222] px-6 py-4 gap-4" data-nav-menu>
+      <a href="index.html" data-nav-link class="text-sm text-neutral-400 hover:text-neutral-100 transition-colors py-2">首页</a>
+      <a href="works.html" data-nav-link class="text-sm text-neutral-400 hover:text-neutral-100 transition-colors py-2">作品</a>
+      <a href="about.html" data-nav-link class="text-sm text-neutral-400 hover:text-neutral-100 transition-colors py-2">关于</a>
+      <a href="contact.html" data-nav-link class="text-sm text-neutral-400 hover:text-neutral-100 transition-colors py-2">联系</a>
+    </div>
+  </nav>
+
+
+  <!-- ═══════════════════════════════════════
+       首屏区域
+       ═══════════════════════════════════════ -->
+  <section class="min-h-screen flex items-center pt-16">
+    <div class="max-w-[1200px] mx-auto px-6 w-full py-24 lg:py-32">
+
+      <div class="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+
+        <!-- 左侧：文字 -->
+        <div class="order-2 lg:order-1">
+          <!-- 身份标签 -->
+          <p class="text-xs font-medium tracking-[.2em] uppercase text-neutral-500 mb-6 reveal">
+            UI设计师 / 工业设计
+          </p>
+
+          <!-- 姓名 -->
+          <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.08] tracking-tight text-neutral-50 mb-6 reveal">
+            铃默
+          </h1>
+
+          <!-- 个性签名 -->
+          <p class="text-lg text-neutral-400 font-light mb-8 reveal">
+            以克制表达质感，以留白构建秩序
+          </p>
+
+          <!-- 标签 -->
+          <div class="flex flex-wrap gap-2 mb-10 reveal-stagger reveal">
+            <span class="tag">小程序</span>
+            <span class="tag">App 设计</span>
+            <span class="tag">后台管理</span>
+            <span class="tag">设计系统</span>
+          </div>
+
+          <!-- 简介 -->
+          <p class="text-base text-neutral-400 leading-relaxed max-w-md mb-10 reveal">
+            专注数字体验设计，在功能与美学之间寻找平衡。擅长小程序、移动应用及企业后台的界面设计与交互体验。
+          </p>
+
+          <!-- 行动按钮 -->
+          <div class="flex flex-wrap gap-4 reveal">
+            <a href="works.html" class="btn btn-primary">
+              查看作品
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+            </a>
+            <a href="about.html" class="btn">了解我</a>
+          </div>
+        </div>
+
+        <!-- 右侧：头像 -->
+        <div class="order-1 lg:order-2 flex justify-center reveal">
+          <div class="relative w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80">
+            <!-- 装饰环 -->
+            <div class="absolute inset-0 rounded-full border border-[#222]"></div>
+            <div class="absolute inset-3 rounded-full border border-[#333]"></div>
+            <!-- 头像占位 — 替换为你的照片 -->
+            <img src="assets/images/avatar.png" alt="铃默" class="w-full h-full object-cover">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       精选作品预览
+       ═══════════════════════════════════════ -->
+  <section class="section">
+    <div class="max-w-[1200px] mx-auto px-6">
+
+      <div class="flex items-end justify-between mb-12 reveal">
+        <div>
+          <p class="text-xs font-medium tracking-[.2em] uppercase text-neutral-500 mb-3">作品集</p>
+          <h2 class="text-3xl sm:text-4xl font-semibold tracking-tight text-neutral-100">精选作品</h2>
+        </div>
+        <a href="works.html" class="hidden sm:inline-flex text-sm text-neutral-400 hover:text-neutral-100 transition-colors gap-2 items-center">
+          查看全部
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
+        </a>
+      </div>
+
+      <!-- 作品网格（3张预览卡片） -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 reveal-stagger">
+
+        <!-- 卡片 1 -->
+        <a href="project.html" class="card group">
+          <div class="aspect-[4/3] img-placeholder relative overflow-hidden">
+            <img src="assets/images/project-01.png" alt="生活服务平台" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors"></div>
+          </div>
+          <div class="p-6">
+            <p class="text-xs font-medium tracking-[.15em] uppercase text-neutral-500 mb-2">APP设计</p>
+            <h3 class="text-lg font-medium text-neutral-100">医药电商系统</h3>
+          </div>
+        </a>
+
+        <!-- 卡片 2 -->
+        <a href="project.html" class="card group">
+          <div class="aspect-[4/3] img-placeholder relative overflow-hidden">
+            <img src="assets/images/project-02.png" alt="健康追踪应用" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors"></div>
+          </div>
+          <div class="p-6">
+            <p class="text-xs font-medium tracking-[.15em] uppercase text-neutral-500 mb-2">APP设计</p>
+            <h3 class="text-lg font-medium text-neutral-100">保险移动展业平台</h3>
+          </div>
+        </a>
+
+        <!-- 卡片 3 -->
+        <a href="project.html" class="card group">
+          <div class="aspect-[4/3] img-placeholder relative overflow-hidden">
+            <img src="assets/images/project-03.png" alt="企业后台系统" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors"></div>
+          </div>
+          <div class="p-6">
+            <p class="text-xs font-medium tracking-[.15em] uppercase text-neutral-500 mb-2">后台管理</p>
+            <h3 class="text-lg font-medium text-neutral-100">智能保险短视频平台</h3>
+          </div>
+        </a>
+
+      </div>
+
+      <!-- 移动端：查看全部 -->
+      <div class="mt-8 text-center sm:hidden">
+        <a href="works.html" class="btn">查看全部作品</a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       页脚
+       ═══════════════════════════════════════ -->
+  <footer class="border-t border-[#222]">
+    <div class="max-w-[1200px] mx-auto px-6 py-12 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-xs text-neutral-500 tracking-wider">&copy; 2026 铃默. 保留所有权利.</p>
+      <div class="flex items-center gap-6">
+        <a href="contact.html" class="text-xs text-neutral-500 hover:text-neutral-300 transition-colors">联系</a>
+        <a href="about.html" class="text-xs text-neutral-500 hover:text-neutral-300 transition-colors">关于</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- 脚本 -->
+  <script src="js/main.js"></script>
+</body>
+</html>

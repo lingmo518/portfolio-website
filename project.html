@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>项目详情 — 铃默</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { surface:'#111111', elevated:'#181818', border:'#222222', accent:'#d4d4d4' },
+          fontFamily: { sans: ['Inter','SF Pro Display','-apple-system','BlinkMacSystemFont','PingFang SC','Microsoft YaHei','sans-serif'] },
+        },
+      },
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/shared.css">
+</head>
+
+<body class="bg-[#0a0a0a] text-neutral-200">
+
+  <!-- ═══ 导航栏 ═══ -->
+  <nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-[#0a0a0a]/80 border-b border-[#222]">
+    <div class="max-w-[1200px] mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="index.html" class="text-sm font-semibold tracking-widest uppercase text-neutral-100">铃默</a>
+      <div class="hidden md:flex items-center gap-8" data-nav-menu>
+        <a href="index.html" data-nav-link class="text-sm text-neutral-400 hover:text-neutral-100 transition-colors">首页</a>
+        <a href="works.html" data-nav-link class="text-sm text-neutral-400 hover:text-neutral-100 transition-colors">作品</a>
+        <a href="about.html" data-nav-link class="text-sm text-neutral-400 hover:text-neutral-100 transition-colors">关于</a>
+        <a href="contact.html" data-nav-link class="text-sm text-neutral-400 hover:text-neutral-100 transition-colors">联系</a>
+      </div>
+      <button data-nav-toggle class="md:hidden w-10 h-10 flex flex-col items-center justify-center gap-1.5" aria-expanded="false" aria-label="菜单">
+        <span class="block w-5 h-px bg-neutral-300 transition-all"></span>
+        <span class="block w-5 h-px bg-neutral-300 transition-all"></span>
+      </button>
+    </div>
+    <div class="md:hidden hidden flex-col bg-[#0a0a0a] border-t border-[#222] px-6 py-4 gap-4" data-nav-menu>
+      <a href="index.html" data-nav-link class="text-sm text-neutral-400 hover:text-neutral-100 py-2">首页</a>
+      <a href="works.html" data-nav-link class="text-sm text-neutral-400 hover:text-neutral-100 py-2">作品</a>
+      <a href="about.html" data-nav-link class="text-sm text-neutral-400 hover:text-neutral-100 py-2">关于</a>
+      <a href="contact.html" data-nav-link class="text-sm text-neutral-400 hover:text-neutral-100 py-2">联系</a>
+    </div>
+  </nav>
+
+
+  <!-- ═══ 项目标题 ═══ -->
+  <section class="pt-32 pb-16">
+    <div class="max-w-[1200px] mx-auto px-6">
+
+      <!-- 返回链接 -->
+      <a href="works.html" class="inline-flex items-center gap-2 text-sm text-neutral-500 hover:text-neutral-300 transition-colors mb-10 reveal">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M11 7H3M5 3L3 7l2 4"/></svg>
+        返回作品列表
+      </a>
+
+      <div class="grid lg:grid-cols-5 gap-12 lg:gap-16 items-start">
+        <!-- 左侧：标题 + 信息（2列） -->
+        <div class="lg:col-span-2">
+          <p class="text-xs font-medium tracking-[.2em] uppercase text-neutral-500 mb-4 reveal">小程序</p>
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-neutral-50 mb-6 reveal">
+            医药电商系统
+          </h1>
+          <p class="text-base text-neutral-400 leading-relaxed mb-8 reveal">
+            一款服务于医药采购商、分销商的B2B平台，通过移动互联网连接药企、医药流通企业与零售终端，致力于优化药品供应链、提升流通效率。公司亟需通过体验升级，提升用户留存与转化，强化平台在医药B2B领域的竞争力。
+          </p>
+
+          <!-- 信息网格 -->
+          <div class="grid grid-cols-2 gap-6 reveal">
+            <div>
+              <p class="text-xs font-medium tracking-[.15em] uppercase text-neutral-500 mb-1">角色</p>
+              <p class="text-sm text-neutral-200">UI / UX 设计师</p>
+            </div>
+            <div>
+              <p class="text-xs font-medium tracking-[.15em] uppercase text-neutral-500 mb-1">年份</p>
+              <p class="text-sm text-neutral-200">2020</p>
+            </div>
+            <div>
+              <p class="text-xs font-medium tracking-[.15em] uppercase text-neutral-500 mb-1">客户</p>
+              <p class="text-sm text-neutral-200">医药公司</p>
+            </div>
+            <div>
+              <p class="text-xs font-medium tracking-[.15em] uppercase text-neutral-500 mb-1">周期</p>
+              <p class="text-sm text-neutral-200">6 周</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 右侧：主图（3列） -->
+        <div class="lg:col-span-3 reveal">
+          <div class="aspect-[16/10] rounded-2xl overflow-hidden"> 
+            <img 
+              src="./assets/images/project-main.png" 
+              alt="项目主图" 
+              class="w-full h-full object-cover object-top" 
+              > 
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ 设计亮点 ═══ -->
+  <section class="section">
+    <div class="max-w-[1200px] mx-auto px-6">
+
+      <div class="mb-12 reveal">
+        <p class="text-xs font-medium tracking-[.2em] uppercase text-neutral-500 mb-3">设计过程</p>
+        <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-neutral-100">设计亮点</h2>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 reveal-stagger">
+
+        <!-- 亮点 1 -->
+        <div class="card p-8">
+          <div class="w-10 h-10 rounded-xl bg-[#1a1a1a] border border-[#222] flex items-center justify-center text-sm text-neutral-400 mb-5">01</div>
+          <h3 class="text-base font-medium text-neutral-100 mb-2">信息架构</h3>
+          <p class="text-sm text-neutral-400 leading-relaxed">重新梳理导航流程，用户操作步骤减少 40%。优先高频功能，简化决策路径。</p>
+        </div>
+
+        <!-- 亮点 2 -->
+        <div class="card p-8">
+          <div class="w-10 h-10 rounded-xl bg-[#1a1a1a] border border-[#222] flex items-center justify-center text-sm text-neutral-400 mb-5">02</div>
+          <h3 class="text-base font-medium text-neutral-100 mb-2">视觉系统</h3>
+          <p class="text-sm text-neutral-400 leading-relaxed">基于 8px 网格构建完整设计系统，统一的圆角规范与克制的单色配色方案。</p>
+        </div>
+
+        <!-- 亮点 3 -->
+        <div class="card p-8">
+          <div class="w-10 h-10 rounded-xl bg-[#1a1a1a] border border-[#222] flex items-center justify-center text-sm text-neutral-400 mb-5">03</div>
+          <h3 class="text-base font-medium text-neutral-100 mb-2">微交互</h3>
+          <p class="text-sm text-neutral-400 leading-relaxed">精心设计的过渡动效与反馈机制，让界面富有响应感而不分散注意力。</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ 全幅展示 ═══ -->
+  <section class="section">
+    <div class="max-w-[1200px] mx-auto px-6">
+
+      <!-- 展示图 1 -->
+      <div class="mb-8 reveal">
+        <div class="aspect-[16/13] rounded-2xl overflow-hidden">
+          <img
+          src="./assets/images/project-full show.png"
+          alt="全幅展示图"
+          class="w-full h-full object-cover object-top"
+          >
+        </div>
+        </div>
+      </div>
+
+      <!-- 双列图片 -->
+<div class="max-w-[1200px] mx-auto px-6">
+  <div class="grid sm:grid-cols-2 gap-6 mb-8 reveal-stagger">
+    <div class="aspect-[4/5] rounded-2xl overflow-hidden">
+      <img 
+        src="./assets/images/project-detail1.png" 
+        alt="双列图1"
+        class="w-full h-full object-cover object-top"
+      >
+    </div>
+    <div class="aspect-[4/5] rounded-2xl overflow-hidden">
+      <img 
+        src="./assets/images/project-detail2.png" 
+        alt="双列图2"
+        class="w-full h-full object-cover object-top"
+      >
+    </div>
+  </div>
+</div>
+
+      <!-- 展示图 2 -->
+      <div class="max-w-[1200px] mx-auto px-6">
+      <div class="reveal">
+        <div class="aspect-[16/13] rounded-2xl overflow-hidden">
+          <img
+          src="./assets/images/project-all.png"
+          alt="最终效果"
+          class="w-full h-full object-cover object-top"
+          >
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══ 间距与排版展示 ═══ -->
+  <section class="section">
+    <div class="max-w-[1200px] mx-auto px-6">
+
+      <div class="mb-12 reveal">
+        <p class="text-xs font-medium tracking-[.2em] uppercase text-neutral-500 mb-3">设计规范</p>
+        <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-neutral-100">间距与排版</h2>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-12 reveal">
+
+        <!-- 间距规范 -->
+        <div>
+          <h3 class="text-sm font-medium text-neutral-300 mb-6">间距系统</h3>
+          <div class="space-y-4">
+            <div class="flex items-center gap-4">
+              <div class="w-1 h-4 bg-neutral-500 rounded-full"></div>
+              <span class="text-xs text-neutral-500 w-12">4px</span>
+              <span class="text-xs text-neutral-400">sp-1</span>
+            </div>
+            <div class="flex items-center gap-4">
+              <div class="w-2 h-4 bg-neutral-500 rounded-full"></div>
+              <span class="text-xs text-neutral-500 w-12">8px</span>
+              <span class="text-xs text-neutral-400">sp-2</span>
+            </div>
+            <div class="flex items-center gap-4">
+              <div class="w-4 h-4 bg-neutral-500 rounded-full"></div>
+              <span class="text-xs text-neutral-500 w-12">16px</span>
+              <span class="text-xs text-neutral-400">sp-4</span>
+            </div>
+            <div class="flex items-center gap-4">
+              <div class="w-6 h-4 bg-neutral-500 rounded-full"></div>
+              <span class="text-xs text-neutral-500 w-12">24px</span>
+              <span class="text-xs text-neutral-400">sp-6</span>
+            </div>
+            <div class="flex items-center gap-4">
+              <div class="w-8 h-4 bg-neutral-500 rounded-full"></div>
+              <span class="text-xs text-neutral-500 w-12">32px</span>
+              <span class="text-xs text-neutral-400">sp-8</span>
+            </div>
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-4 bg-neutral-500 rounded-full"></div>
+              <span class="text-xs text-neutral-500 w-12">48px</span>
+              <span class="text-xs text-neutral-400">sp-12</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 字体规范 -->
+        <div>
+          <h3 class="text-sm font-medium text-neutral-300 mb-6">字体层级</h3>
+          <div class="space-y-5">
+            <div>
+              <p class="text-4xl font-bold text-neutral-100 leading-[1.1] tracking-tight">一级标题</p>
+              <p class="text-xs text-neutral-500 mt-1">64px / 700 / 1.1</p>
+            </div>
+            <div>
+              <p class="text-2xl font-semibold text-neutral-100 leading-[1.2]">二级标题</p>
+              <p class="text-xs text-neutral-500 mt-1">40px / 600 / 1.2</p>
+            </div>
+            <div>
+              <p class="text-lg font-medium text-neutral-100 leading-[1.3]">三级标题</p>
+              <p class="text-xs text-neutral-500 mt-1">24px / 500 / 1.3</p>
+            </div>
+            <div>
+              <p class="text-base text-neutral-200 leading-[1.7]">正文内容，用于长篇阅读场景。</p>
+              <p class="text-xs text-neutral-500 mt-1">16px / 400 / 1.7</p>
+            </div>
+            <div>
+              <p class="text-sm text-neutral-400">辅助文字与次要信息。</p>
+              <p class="text-xs text-neutral-500 mt-1">14px / 400 / 1.5</p>
+            </div>
+            <div>
+              <p class="text-xs font-medium tracking-[.15em] uppercase text-neutral-500">标签文字</p>
+              <p class="text-xs text-neutral-500 mt-1">12px / 500 / 1.4</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ 下一个项目 ═══ -->
+  <section class="section">
+    <div class="max-w-[1200px] mx-auto px-6">
+      <div class="divider mb-12"></div>
+      <a href="project.html" class="group flex items-end justify-between reveal">
+        <div>
+          <p class="text-xs font-medium tracking-[.2em] uppercase text-neutral-500 mb-3">下一个项目</p>
+          <h2 class="text-2xl sm:text-3xl font-semibold text-neutral-100 group-hover:text-neutral-50 transition-colors">健康追踪应用</h2>
+        </div>
+        <svg class="w-8 h-8 text-neutral-500 group-hover:text-neutral-200 group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M5 12h14M15 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </section>
+
+
+  <!-- ═══ 页脚 ═══ -->
+  <footer class="border-t border-[#222]">
+    <div class="max-w-[1200px] mx-auto px-6 py-12 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-xs text-neutral-500 tracking-wider">&copy; 2026 铃默. 保留所有权利.</p>
+      <div class="flex items-center gap-6">
+        <a href="contact.html" class="text-xs text-neutral-500 hover:text-neutral-300 transition-colors">联系</a>
+        <a href="about.html" class="text-xs text-neutral-500 hover:text-neutral-300 transition-colors">关于</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="js/main.js"></script>
+</body>
+</html>
