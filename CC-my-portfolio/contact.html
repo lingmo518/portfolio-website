@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>联系 — 铃默</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { surface:'#111111', elevated:'#181818', border:'#222222', accent:'#d4d4d4' },
+          fontFamily: { sans: ['Inter','SF Pro Display','-apple-system','BlinkMacSystemFont','PingFang SC','Microsoft YaHei','sans-serif'] },
+        },
+      },
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/shared.css">
+</head>
+
+<body class="bg-[#0a0a0a] text-neutral-200">
+
+  <!-- ═══ 导航栏 ═══ -->
+  <nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-[#0a0a0a]/80 border-b border-[#222]">
+    <div class="max-w-[1200px] mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="index.html" class="text-sm font-semibold tracking-widest uppercase text-neutral-100">铃默</a>
+      <div class="hidden md:flex items-center gap-8" data-nav-menu>
+        <a href="index.html" data-nav-link class="text-sm text-neutral-400 hover:text-neutral-100 transition-colors">首页</a>
+        <a href="works.html" data-nav-link class="text-sm text-neutral-400 hover:text-neutral-100 transition-colors">作品</a>
+        <a href="about.html" data-nav-link class="text-sm text-neutral-400 hover:text-neutral-100 transition-colors">关于</a>
+        <a href="contact.html" data-nav-link class="text-sm text-neutral-400 hover:text-neutral-100 transition-colors">联系</a>
+      </div>
+      <button data-nav-toggle class="md:hidden w-10 h-10 flex flex-col items-center justify-center gap-1.5" aria-expanded="false" aria-label="菜单">
+        <span class="block w-5 h-px bg-neutral-300 transition-all"></span>
+        <span class="block w-5 h-px bg-neutral-300 transition-all"></span>
+      </button>
+    </div>
+    <div class="md:hidden hidden flex-col bg-[#0a0a0a] border-t border-[#222] px-6 py-4 gap-4" data-nav-menu>
+      <a href="index.html" data-nav-link class="text-sm text-neutral-400 hover:text-neutral-100 py-2">首页</a>
+      <a href="works.html" data-nav-link class="text-sm text-neutral-400 hover:text-neutral-100 py-2">作品</a>
+      <a href="about.html" data-nav-link class="text-sm text-neutral-400 hover:text-neutral-100 py-2">关于</a>
+      <a href="contact.html" data-nav-link class="text-sm text-neutral-400 hover:text-neutral-100 py-2">联系</a>
+    </div>
+  </nav>
+
+
+  <!-- ═══ 页面标题 ═══ -->
+  <section class="pt-32 pb-16">
+    <div class="max-w-[1200px] mx-auto px-6">
+      <p class="text-xs font-medium tracking-[.2em] uppercase text-neutral-500 mb-4 reveal">联系</p>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-neutral-50 mb-6 reveal">联系我</h1>
+      <p class="text-base text-neutral-400 max-w-lg reveal">
+        有项目合作或想聊聊设计？期待与你交流。
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ═══ 联系方式卡片 ═══ -->
+  <section class="section pt-0">
+    <div class="max-w-[1200px] mx-auto px-6">
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16 reveal-stagger">
+
+        <!-- 邮箱 -->
+        <a href="mailto:lingmo@email.com" class="card p-8 group">
+          <div class="w-12 h-12 rounded-xl bg-[#1a1a1a] border border-[#222] flex items-center justify-center mb-6 group-hover:border-neutral-500 transition-colors">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" class="text-neutral-400"><rect x="2" y="4" width="16" height="12" rx="2"/><path d="M2 6l8 5 8-5"/></svg>
+          </div>
+          <p class="text-xs font-medium tracking-[.15em] uppercase text-neutral-500 mb-2">邮箱</p>
+          <p class="text-sm text-neutral-200 group-hover:text-neutral-50 transition-colors">1390113789@qq.com</p>
+        </a>
+
+        <!-- 微信 -->
+        <div class="card p-8 group">
+          <div class="w-12 h-12 rounded-xl bg-[#1a1a1a] border border-[#222] flex items-center justify-center mb-6 group-hover:border-neutral-500 transition-colors">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" class="text-neutral-400"><path d="M8 10h.01M12 10h.01M8 14c1.5 1 4.5 1 6 0M3 10a7 7 0 0114 0c0 3.5-3.5 6-7 6-1 0-2-.2-3-.5L3 17l1-3.5C3.3 12.2 3 11.1 3 10z"/></svg>
+          </div>
+          <p class="text-xs font-medium tracking-[.15em] uppercase text-neutral-500 mb-2">微信</p>
+          <p class="text-sm text-neutral-200">LingMo_Design</p>
+        </div>
+
+        <!-- 站酷 -->
+        <a href="#" class="card p-8 group sm:col-span-2 lg:col-span-1">
+          <div class="w-12 h-12 rounded-xl bg-[#1a1a1a] border border-[#222] flex items-center justify-center mb-6 group-hover:border-neutral-500 transition-colors">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" class="text-neutral-400"><circle cx="10" cy="10" r="8"/><path d="M2 10h16M10 2a13 13 0 014 8 13 13 0 01-4 8M10 2a13 13 0 00-4 8 13 13 0 004 8"/></svg>
+          </div>
+          <p class="text-xs font-medium tracking-[.15em] uppercase text-neutral-500 mb-2">站酷</p>
+          <p class="text-sm text-neutral-200 group-hover:text-neutral-50 transition-colors">zcool.com.cn/lingmo</p>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ 联系表单 ═══ -->
+  <section class="section pt-0">
+    <div class="max-w-[720px] mx-auto px-6">
+
+      <div class="mb-10 reveal">
+        <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-neutral-100 mb-3">给我留言</h2>
+        <p class="text-sm text-neutral-400">通常在 24 小时内回复。</p>
+      </div>
+
+      <form class="space-y-6 reveal" onsubmit="event.preventDefault(); this.querySelector('button[type=submit]').textContent='已发送！'; this.querySelector('button[type=submit]').disabled=true;">
+
+        <!-- 姓名 -->
+        <div>
+          <label class="block text-xs font-medium tracking-[.15em] uppercase text-neutral-500 mb-2">姓名</label>
+          <input type="text" required placeholder="你的姓名"
+            class="w-full bg-[#111] border border-[#222] rounded-xl px-5 py-3.5 text-sm text-neutral-200 placeholder:text-neutral-600 focus:outline-none focus:border-neutral-500 transition-colors">
+        </div>
+
+        <!-- 邮箱 -->
+        <div>
+          <label class="block text-xs font-medium tracking-[.15em] uppercase text-neutral-500 mb-2">邮箱</label>
+          <input type="email" required placeholder="you@example.com"
+            class="w-full bg-[#111] border border-[#222] rounded-xl px-5 py-3.5 text-sm text-neutral-200 placeholder:text-neutral-600 focus:outline-none focus:border-neutral-500 transition-colors">
+        </div>
+
+        <!-- 主题 -->
+        <div>
+          <label class="block text-xs font-medium tracking-[.15em] uppercase text-neutral-500 mb-2">主题</label>
+          <input type="text" placeholder="项目合作"
+            class="w-full bg-[#111] border border-[#222] rounded-xl px-5 py-3.5 text-sm text-neutral-200 placeholder:text-neutral-600 focus:outline-none focus:border-neutral-500 transition-colors">
+        </div>
+
+        <!-- 留言 -->
+        <div>
+          <label class="block text-xs font-medium tracking-[.15em] uppercase text-neutral-500 mb-2">留言</label>
+          <textarea rows="5" required placeholder="聊聊你的项目…"
+            class="w-full bg-[#111] border border-[#222] rounded-xl px-5 py-3.5 text-sm text-neutral-200 placeholder:text-neutral-600 focus:outline-none focus:border-neutral-500 transition-colors resize-none"></textarea>
+        </div>
+
+        <!-- 提交 -->
+        <button type="submit" class="btn btn-primary w-full justify-center">
+          发送留言
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </button>
+
+      </form>
+
+    </div>
+  </section>
+
+
+  <!-- ═══ 社交链接 ═══ -->
+  <section class="section">
+    <div class="max-w-[1200px] mx-auto px-6">
+
+      <div class="divider mb-12"></div>
+
+      <div class="flex flex-wrap items-center justify-center gap-4 reveal">
+        <a href="#" class="tag">Dribbble</a>
+        <a href="#" class="tag">Behance</a>
+        <a href="#" class="tag">站酷</a>
+        <a href="#" class="tag">领英</a>
+        <a href="#" class="tag">X / Twitter</a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══ 页脚 ═══ -->
+  <footer class="border-t border-[#222]">
+    <div class="max-w-[1200px] mx-auto px-6 py-12 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-xs text-neutral-500 tracking-wider">&copy; 2026 铃默. 保留所有权利.</p>
+      <div class="flex items-center gap-6">
+        <a href="works.html" class="text-xs text-neutral-500 hover:text-neutral-300 transition-colors">作品</a>
+        <a href="about.html" class="text-xs text-neutral-500 hover:text-neutral-300 transition-colors">关于</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="js/main.js"></script>
+</body>
+</html>

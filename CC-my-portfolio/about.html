@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>关于 — 铃默</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { surface:'#111111', elevated:'#181818', border:'#222222', accent:'#d4d4d4' },
+          fontFamily: { sans: ['Inter','SF Pro Display','-apple-system','BlinkMacSystemFont','PingFang SC','Microsoft YaHei','sans-serif'] },
+        },
+      },
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/shared.css">
+</head>
+
+<body class="bg-[#0a0a0a] text-neutral-200">
+
+  <!-- ═══ 导航栏 ═══ -->
+  <nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-[#0a0a0a]/80 border-b border-[#222]">
+    <div class="max-w-[1200px] mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="index.html" class="text-sm font-semibold tracking-widest uppercase text-neutral-100">铃默</a>
+      <div class="hidden md:flex items-center gap-8" data-nav-menu>
+        <a href="index.html" data-nav-link class="text-sm text-neutral-400 hover:text-neutral-100 transition-colors">首页</a>
+        <a href="works.html" data-nav-link class="text-sm text-neutral-400 hover:text-neutral-100 transition-colors">作品</a>
+        <a href="about.html" data-nav-link class="text-sm text-neutral-400 hover:text-neutral-100 transition-colors">关于</a>
+        <a href="contact.html" data-nav-link class="text-sm text-neutral-400 hover:text-neutral-100 transition-colors">联系</a>
+      </div>
+      <button data-nav-toggle class="md:hidden w-10 h-10 flex flex-col items-center justify-center gap-1.5" aria-expanded="false" aria-label="菜单">
+        <span class="block w-5 h-px bg-neutral-300 transition-all"></span>
+        <span class="block w-5 h-px bg-neutral-300 transition-all"></span>
+      </button>
+    </div>
+    <div class="md:hidden hidden flex-col bg-[#0a0a0a] border-t border-[#222] px-6 py-4 gap-4" data-nav-menu>
+      <a href="index.html" data-nav-link class="text-sm text-neutral-400 hover:text-neutral-100 py-2">首页</a>
+      <a href="works.html" data-nav-link class="text-sm text-neutral-400 hover:text-neutral-100 py-2">作品</a>
+      <a href="about.html" data-nav-link class="text-sm text-neutral-400 hover:text-neutral-100 py-2">关于</a>
+      <a href="contact.html" data-nav-link class="text-sm text-neutral-400 hover:text-neutral-100 py-2">联系</a>
+    </div>
+  </nav>
+
+
+  <!-- ═══ 页面标题 ═══ -->
+  <section class="pt-32 pb-16">
+    <div class="max-w-[1200px] mx-auto px-6">
+      <p class="text-xs font-medium tracking-[.2em] uppercase text-neutral-500 mb-4 reveal">关于</p>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-neutral-50 mb-6 reveal">关于我</h1>
+      <p class="text-base text-neutral-400 max-w-lg reveal">
+        从工业设计到 UI 设计——在形式与功能之间构建有温度的界面。
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ═══ 个人简介 ═══ -->
+  <section class="section pt-0">
+    <div class="max-w-[1200px] mx-auto px-6">
+
+      <div class="grid lg:grid-cols-5 gap-12 lg:gap-16 reveal">
+
+        <!-- 照片 -->
+        <div class="lg:col-span-2">
+          <img src="./assets/images/shturl.cc:5.png" alt="铃默" class="w-full h-full object-cover rounded-2xl">
+        </div>
+
+        <!-- 简介 -->
+        <div class="lg:col-span-3 flex flex-col justify-center">
+          <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-neutral-100 mb-6">铃默</h2>
+          <div class="space-y-4 text-sm text-neutral-400 leading-relaxed">
+            <p>
+              工业设计专业出身，我将结构化的系统性思维带入数字界面设计。我相信好的 UI 是无形的——它引导用户，而不强求关注。
+            </p>
+            <p>
+              多年来，我为多种平台做过设计——从轻量级的小程序到复杂的企业后台。我的方法始终如一：清晰胜过装饰，功能胜过新潮。
+            </p>
+            <p>
+              我着迷于设计精度与人类行为的交汇处。每一个像素的位置、每一条过渡曲线、每一处留白的决策，都是有意为之。
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ 经历时间线 ═══ -->
+  <section class="section">
+    <div class="max-w-[1200px] mx-auto px-6">
+
+      <div class="mb-12 reveal">
+        <p class="text-xs font-medium tracking-[.2em] uppercase text-neutral-500 mb-3">经历</p>
+        <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-neutral-100">职业历程</h2>
+      </div>
+
+      <div class="space-y-0 reveal-stagger">
+
+        <!-- 时间线 1 -->
+        <div class="grid sm:grid-cols-[140px_1fr] gap-4 sm:gap-8 py-8 border-t border-[#222]">
+          <p class="text-sm text-neutral-500">2024 — 至今</p>
+          <div>
+            <h3 class="text-base font-medium text-neutral-100 mb-1">高级 UI 设计师</h3>
+            <p class="text-sm text-neutral-400">负责企业级产品线的界面设计，建立并维护横跨 3 条产品线的设计系统。</p>
+          </div>
+        </div>
+
+        <!-- 时间线 2 -->
+        <div class="grid sm:grid-cols-[140px_1fr] gap-4 sm:gap-8 py-8 border-t border-[#222]">
+          <p class="text-sm text-neutral-500">2021 — 2024</p>
+          <div>
+            <h3 class="text-base font-medium text-neutral-100 mb-1">UI 设计师</h3>
+            <p class="text-sm text-neutral-400">负责保险类全链路 UI 设计，覆盖移动端应用、小程序与企业后台，从概念到上线交付3+ 个项目。</p>
+          </div>
+        </div>
+
+        <!-- 时间线 3 -->
+        <div class="grid sm:grid-cols-[140px_1fr] gap-4 sm:gap-8 py-8 border-t border-[#222]">
+          <p class="text-sm text-neutral-500">2018 — 2021</p>
+          <div>
+            <h3 class="text-base font-medium text-neutral-100 mb-1">UI设计师</h3>
+            <p class="text-sm text-neutral-400">负责面向医药行业报货平台系统的优化，包括移动端，PC商城和后台管理系统。</p>
+          </div>
+        </div>
+
+        <!-- 时间线 4 -->
+        <div class="grid sm:grid-cols-[140px_1fr] gap-4 sm:gap-8 py-8 border-t border-[#222]">
+          <p class="text-sm text-neutral-500">2017 — 2018</p>
+          <div>
+            <h3 class="text-base font-medium text-neutral-100 mb-1">工业设计</h3>
+            <p class="text-sm text-neutral-400">工业设计学士学位。在用户研究、人机工程与形态塑造方面打下了扎实的根基，至今仍深刻影响着我的数字设计工作。</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ 技能栈 ═══ -->
+  <section class="section">
+    <div class="max-w-[1200px] mx-auto px-6">
+
+      <div class="mb-12 reveal">
+        <p class="text-xs font-medium tracking-[.2em] uppercase text-neutral-500 mb-3">能力</p>
+        <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-neutral-100">技能栈</h2>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 reveal-stagger">
+
+        <!-- 技能 1 -->
+        <div class="card p-8">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-2 h-2 rounded-full bg-neutral-300"></div>
+            <h3 class="text-sm font-medium text-neutral-100">界面设计</h3>
+          </div>
+          <p class="text-sm text-neutral-400 leading-relaxed">高保真界面设计、组件系统、响应式布局与像素级精准交付，确保跨平台视觉一致性。</p>
+        </div>
+
+        <!-- 技能 2 -->
+        <div class="card p-8">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-2 h-2 rounded-full bg-neutral-300"></div>
+            <h3 class="text-sm font-medium text-neutral-100">体验策略</h3>
+          </div>
+          <p class="text-sm text-neutral-400 leading-relaxed">用户研究、用户旅程图、信息架构与复杂工作流的交互设计，提升用户体验流畅度。</p>
+        </div>
+
+        <!-- 技能 3 -->
+        <div class="card p-8">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-2 h-2 rounded-full bg-neutral-300"></div>
+            <h3 class="text-sm font-medium text-neutral-100">设计系统</h3>
+          </div>
+          <p class="text-sm text-neutral-400 leading-relaxed">基于 Token 的设计系统，包含间距、字体与色彩规范，跨产品与团队可复用，确保设计一致性。</p>
+        </div>
+
+        <!-- 技能 4 -->
+        <div class="card p-8">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-2 h-2 rounded-full bg-neutral-300"></div>
+            <h3 class="text-sm font-medium text-neutral-100">原型设计</h3>
+          </div>
+          <p class="text-sm text-neutral-400 leading-relaxed">带有真实动效、微交互与用户流程验证的交互原型，快速验证设计概念。</p>
+        </div>
+
+        <!-- 技能 5 -->
+        <div class="card p-8">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-2 h-2 rounded-full bg-neutral-300"></div>
+            <h3 class="text-sm font-medium text-neutral-100">AI 产品界面设计</h3>
+          </div>
+          <p class="text-sm text-neutral-400 leading-relaxed">聚焦对话式AI、智能助手等设计，兼顾对话流交互与多模态展示，打造流畅自然的AI产品体验。</p>
+        </div>
+
+        <!-- 技能 6 -->
+        <div class="card p-8">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-2 h-2 rounded-full bg-neutral-300"></div>
+            <h3 class="text-sm font-medium text-neutral-100">AI 辅助设计与效率提升</h3>
+          </div>
+          <p class="text-sm text-neutral-400 leading-relaxed">运用AI工具生成灵感、批量输出组件，提升交付效率，探索AI与设计流程的深度融合。</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ 擅长领域 ═══ -->
+  <section class="section">
+    <div class="max-w-[1200px] mx-auto px-6">
+
+      <div class="mb-12 reveal">
+        <p class="text-xs font-medium tracking-[.2em] uppercase text-neutral-500 mb-3">领域</p>
+        <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-neutral-100">擅长领域</h2>
+      </div>
+
+      <div class="grid sm:grid-cols-3 gap-6 reveal-stagger">
+
+        <div class="text-center py-12 px-6 card">
+          <div class="w-14 h-14 mx-auto rounded-2xl bg-[#1a1a1a] border border-[#222] flex items-center justify-center text-xl mb-5">
+            📱
+          </div>
+          <h3 class="text-base font-medium text-neutral-100 mb-2">小程序</h3>
+          <p class="text-sm text-neutral-400">微信 / 支付宝生态</p>
+        </div>
+
+        <div class="text-center py-12 px-6 card">
+          <div class="w-14 h-14 mx-auto rounded-2xl bg-[#1a1a1a] border border-[#222] flex items-center justify-center text-xl mb-5">
+            🖥
+          </div>
+          <h3 class="text-base font-medium text-neutral-100 mb-2">移动应用</h3>
+          <p class="text-sm text-neutral-400">iOS / Android 原生应用</p>
+        </div>
+
+        <div class="text-center py-12 px-6 card">
+          <div class="w-14 h-14 mx-auto rounded-2xl bg-[#1a1a1a] border border-[#222] flex items-center justify-center text-xl mb-5">
+            ⚙
+          </div>
+          <h3 class="text-base font-medium text-neutral-100 mb-2">后台管理</h3>
+          <p class="text-sm text-neutral-400">管理后台 / 数据看板</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ 工具 ═══ -->
+  <section class="section">
+    <div class="max-w-[1200px] mx-auto px-6">
+
+      <div class="mb-12 reveal">
+        <p class="text-xs font-medium tracking-[.2em] uppercase text-neutral-500 mb-3">工具箱</p>
+        <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-neutral-100">常用工具</h2>
+      </div>
+
+      <div class="flex flex-wrap gap-3 reveal">
+        <span class="tag">Figma</span>
+        <span class="tag">Sketch</span>
+        <span class="tag">Axure</span>
+        <span class="tag">Photoshop</span>
+        <span class="tag">Illustrator</span>
+        <span class="tag">PowerPoint</span>
+        <span class="tag">Principle</span>
+        <span class="tag">Framer</span>
+        <span class="tag">Notion</span>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══ 页脚 ═══ -->
+  <footer class="border-t border-[#222]">
+    <div class="max-w-[1200px] mx-auto px-6 py-12 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-xs text-neutral-500 tracking-wider">&copy; 2026 铃默. 保留所有权利.</p>
+      <div class="flex items-center gap-6">
+        <a href="contact.html" class="text-xs text-neutral-500 hover:text-neutral-300 transition-colors">联系</a>
+        <a href="works.html" class="text-xs text-neutral-500 hover:text-neutral-300 transition-colors">作品</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="js/main.js"></script>
+</body>
+</html>
